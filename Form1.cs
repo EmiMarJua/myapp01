@@ -30,7 +30,7 @@ namespace MyApp01
 
 
             MessageBox.Show("tu usuario se llama: " + nombre);
-
+            MessageBox.Show("Bienvenido a la aplicacion: " + nombre);
             this.Close();
 
         }

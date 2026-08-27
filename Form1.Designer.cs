@@ -44,14 +44,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(65, 92);
+            this.txtNombre.Location = new System.Drawing.Point(133, 38);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(198, 22);
             this.txtNombre.TabIndex = 1;
             // 
             // buttNombre
             // 
-            this.buttNombre.Location = new System.Drawing.Point(65, 151);
+            this.buttNombre.Location = new System.Drawing.Point(359, 23);
             this.buttNombre.Name = "buttNombre";
             this.buttNombre.Size = new System.Drawing.Size(111, 47);
             this.buttNombre.TabIndex = 2;
@@ -64,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(343, 243);
+            this.ClientSize = new System.Drawing.Size(524, 96);
             this.Controls.Add(this.buttNombre);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
