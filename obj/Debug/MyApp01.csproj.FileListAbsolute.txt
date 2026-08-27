@@ -1,0 +1,10 @@
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\bin\Debug\MyApp01.exe.config
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\bin\Debug\MyApp01.exe
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\bin\Debug\MyApp01.pdb
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.AssemblyReference.cache
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Form1.resources
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Properties.Resources.resources
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.GenerateResource.cache
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.csproj.CoreCompileInputs.cache
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.exe
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.pdb
