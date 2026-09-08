@@ -17,27 +17,54 @@ namespace MyApp01
             InitializeComponent();
         }
 
-        private void buttCalcular_Click(object sender, EventArgs e)
+        int contador = 0;
+        int minutos = 0;
+
+        bool bandera = false;
+
+        private void tmrReloj_Tick(object sender, EventArgs e)
         {
+            //hora minutos y am o pm
+            // labReloj.Text = DateTime.Now.ToShortTimeString();// hora del sistema en el pc
+            // labReloj.Text = DateTime.Now.ToLongTimeString(); //muestra los segundos y a hora
 
-            int a, b = 0;
+            contador++;
 
-                a = Int32.Parse(textNum1.Text);
-                b = Int32.Parse(textNum2.Text);
+            DateTime tiempo = DateTime.Now;
+            labReloj.Text = tiempo.ToString("HH:mm:ss");
+            labFecha.Text = tiempo.ToString("MM-dd-yyyy");
 
-            textResultado.Text = (a + b).ToString();
+            if(contador == 60)
+            {
+                minutos++;
+                contador = 0;
+            }
 
-           // MessageBox.Show("La suma es: " + (a + b).ToString());
-          //  this.Close();
+            labEjecucion.Text = "Tiempo en Ejecucion: " + minutos.ToString() + " minutos en ejecucion";
 
         }
 
-        private void buttLimpiar_Click(object sender, EventArgs e)
+        private void buttEncener_Click(object sender, EventArgs e)
         {
-            textNum1.Clear(); 
-            textNum2.Clear();
-            textResultado.Clear();
-            textNum1.Focus();//poner el cursor en el textNum1
+            if(bandera == false)
+            {
+                bandera = true;
+                tmrReloj.Enabled = true;
+                buttEncener.Text = "Apagar";
+
+            }
+            else
+            {
+                bandera = false;
+                tmrReloj.Enabled = false; 
+                buttEncener.Text = "Encender";  
+
+            }
+
+            
         }
+
+        //autoguardado en notas 
+
     }
 }

@@ -28,99 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttCalcular = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textNum1 = new System.Windows.Forms.TextBox();
-            this.textNum2 = new System.Windows.Forms.TextBox();
-            this.textResultado = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttLimpiar = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.labReloj = new System.Windows.Forms.Label();
+            this.tmrReloj = new System.Windows.Forms.Timer(this.components);
+            this.labFecha = new System.Windows.Forms.Label();
+            this.labEjecucion = new System.Windows.Forms.Label();
+            this.buttEncener = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.SuspendLayout();
             // 
-            // buttCalcular
+            // labReloj
             // 
-            this.buttCalcular.Location = new System.Drawing.Point(29, 184);
-            this.buttCalcular.Name = "buttCalcular";
-            this.buttCalcular.Size = new System.Drawing.Size(100, 30);
-            this.buttCalcular.TabIndex = 0;
-            this.buttCalcular.Text = "Calcular";
-            this.buttCalcular.UseVisualStyleBackColor = true;
-            this.buttCalcular.Click += new System.EventHandler(this.buttCalcular_Click);
+            this.labReloj.AutoSize = true;
+            this.labReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labReloj.Location = new System.Drawing.Point(111, 33);
+            this.labReloj.Name = "labReloj";
+            this.labReloj.Size = new System.Drawing.Size(64, 69);
+            this.labReloj.TabIndex = 0;
+            this.labReloj.Text = "0";
             // 
-            // label1
+            // tmrReloj
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Numero 1";
+            this.tmrReloj.Interval = 1000;
+            this.tmrReloj.Tick += new System.EventHandler(this.tmrReloj_Tick);
             // 
-            // label2
+            // labFecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Numero 2";
+            this.labFecha.AutoSize = true;
+            this.labFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFecha.Location = new System.Drawing.Point(111, 125);
+            this.labFecha.Name = "labFecha";
+            this.labFecha.Size = new System.Drawing.Size(64, 69);
+            this.labFecha.TabIndex = 1;
+            this.labFecha.Text = "0";
             // 
-            // textNum1
+            // labEjecucion
             // 
-            this.textNum1.Location = new System.Drawing.Point(12, 34);
-            this.textNum1.Name = "textNum1";
-            this.textNum1.Size = new System.Drawing.Size(199, 22);
-            this.textNum1.TabIndex = 3;
+            this.labEjecucion.AutoSize = true;
+            this.labEjecucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEjecucion.Location = new System.Drawing.Point(12, 307);
+            this.labEjecucion.Name = "labEjecucion";
+            this.labEjecucion.Size = new System.Drawing.Size(289, 29);
+            this.labEjecucion.TabIndex = 2;
+            this.labEjecucion.Text = "Tiempo en Ejecucion: 0";
             // 
-            // textNum2
+            // buttEncener
             // 
-            this.textNum2.Location = new System.Drawing.Point(12, 111);
-            this.textNum2.Name = "textNum2";
-            this.textNum2.Size = new System.Drawing.Size(199, 22);
-            this.textNum2.TabIndex = 4;
+            this.buttEncener.Location = new System.Drawing.Point(508, 307);
+            this.buttEncener.Name = "buttEncener";
+            this.buttEncener.Size = new System.Drawing.Size(75, 23);
+            this.buttEncener.TabIndex = 3;
+            this.buttEncener.Text = "Encender";
+            this.buttEncener.UseVisualStyleBackColor = true;
+            this.buttEncener.Click += new System.EventHandler(this.buttEncener_Click);
             // 
-            // textResultado
+            // statusStrip1
             // 
-            this.textResultado.Location = new System.Drawing.Point(219, 188);
-            this.textResultado.Name = "textResultado";
-            this.textResultado.Size = new System.Drawing.Size(199, 22);
-            this.textResultado.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(216, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Resultado";
-            // 
-            // buttLimpiar
-            // 
-            this.buttLimpiar.Location = new System.Drawing.Point(333, 30);
-            this.buttLimpiar.Name = "buttLimpiar";
-            this.buttLimpiar.Size = new System.Drawing.Size(100, 30);
-            this.buttLimpiar.TabIndex = 7;
-            this.buttLimpiar.Text = "Limpiar";
-            this.buttLimpiar.UseVisualStyleBackColor = true;
-            this.buttLimpiar.Click += new System.EventHandler(this.buttLimpiar_Click);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 321);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(620, 24);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 294);
-            this.Controls.Add(this.buttLimpiar);
-            this.Controls.Add(this.textResultado);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textNum2);
-            this.Controls.Add(this.textNum1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttCalcular);
+            this.ClientSize = new System.Drawing.Size(620, 345);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.buttEncener);
+            this.Controls.Add(this.labEjecucion);
+            this.Controls.Add(this.labFecha);
+            this.Controls.Add(this.labReloj);
             this.Name = "Form1";
-            this.Text = "Primera App Topap";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,14 +110,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttCalcular;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textNum1;
-        private System.Windows.Forms.TextBox textNum2;
-        private System.Windows.Forms.TextBox textResultado;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttLimpiar;
+        private System.Windows.Forms.Label labReloj;
+        private System.Windows.Forms.Timer tmrReloj;
+        private System.Windows.Forms.Label labFecha;
+        private System.Windows.Forms.Label labEjecucion;
+        private System.Windows.Forms.Button buttEncener;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 

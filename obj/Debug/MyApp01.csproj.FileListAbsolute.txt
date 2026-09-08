@@ -8,3 +8,4 @@ C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\bin\Debug\MyApp01.exe
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\bin\Debug\MyApp01.pdb
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.exe
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.pdb
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.exe.config
