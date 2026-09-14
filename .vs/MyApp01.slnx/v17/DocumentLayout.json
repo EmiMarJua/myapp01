@@ -18,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "MyApp01\\Form1.cs",
               "ToolTip": "C:\\Users\\Emiliano Marcial\\source\\repos\\MyApp01\\MyApp01\\Form1.cs",
               "RelativeToolTip": "MyApp01\\Form1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-30T21:11:04.745Z",
               "EditorCaption": ""

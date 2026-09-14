@@ -28,14 +28,10 @@
               "RelativeDocumentMoniker": "MyApp01\\Form1.cs",
               "ToolTip": "C:\\Users\\Emiliano Marcial\\source\\repos\\MyApp01\\MyApp01\\Form1.cs",
               "RelativeToolTip": "MyApp01\\Form1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-30T21:11:04.745Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -46,8 +42,7 @@
               "ToolTip": "C:\\Users\\Emiliano Marcial\\source\\repos\\MyApp01\\MyApp01\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "MyApp01\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T21:00:25.661Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-09-07T21:00:25.661Z"
             }
           ]
         }
