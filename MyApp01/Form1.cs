@@ -16,5 +16,17 @@ namespace MyApp01
         {
             InitializeComponent();
         }
+
+        
+
+        private void buttAgregar_Click(object sender, EventArgs e)
+        {
+
+            
+
+        }
+
+
+
     }
 }
