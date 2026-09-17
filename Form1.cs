@@ -12,59 +12,57 @@ namespace MyApp01
 {
     public partial class Form1 : Form
     {
+
+        List<Persona> personas = new List<Persona>();
+
+
         public Form1()
         {
             InitializeComponent();
+            personas.Add(new Persona(1,"Jose Luis","8714502555"));
+            personas.Add(new Persona(2, "Jose Mario", "8712556220"));
+            personas.Add(new Persona(3, "Dina Bonaparte", "8712555890"));
+            personas.Add(new Persona(4, "Jose Emmanuel", "9712556220"));
         }
 
-        int contador = 0;
-        int minutos = 0;
+        
 
-        bool bandera = false;
-
-        private void tmrReloj_Tick(object sender, EventArgs e)
+        private void buttAgregar_Click(object sender, EventArgs e)
         {
-            //hora minutos y am o pm
-            // labReloj.Text = DateTime.Now.ToShortTimeString();// hora del sistema en el pc
-            // labReloj.Text = DateTime.Now.ToLongTimeString(); //muestra los segundos y a hora
 
-            contador++;
+            dgvMostrar.Rows.Add();
 
-            DateTime tiempo = DateTime.Now;
-            labReloj.Text = tiempo.ToString("HH:mm:ss");
-            labFecha.Text = tiempo.ToString("MM-dd-yyyy");
 
-            if(contador == 60)
-            {
-                minutos++;
-                contador = 0;
-            }
 
-            labEjecucion.Text = "Tiempo en Ejecucion: " + minutos.ToString() + " minutos en ejecucion";
+            dgvMostrar[0,dgvMostrar.Rows.Count-1].Value = dgvMostrar.Rows.Count;
+            dgvMostrar[1,dgvMostrar.Rows.Count-1].Value = textNombre.Text;
+            dgvMostrar[2,dgvMostrar.Rows.Count-1].Value = mtbTelefono.Text;
+
 
         }
 
-        private void buttEncener_Click(object sender, EventArgs e)
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
-            if(bandera == false)
-            {
-                bandera = true;
-                tmrReloj.Enabled = true;
-                buttEncener.Text = "Apagar";
 
-            }
-            else
-            {
-                bandera = false;
-                tmrReloj.Enabled = false; 
-                buttEncener.Text = "Encender";  
-
-            }
-
-            
         }
 
-        //autoguardado en notas 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            foreach (var persona in personas)//datos precargados con una clase mediante ubicacion en una  lista
+                                            //usando get set y un bucle foreach
+            {
+
+                dgvMostrar.Rows.Add();
+                dgvMostrar[0, dgvMostrar.Rows.Count - 1].Value = persona.id;
+                dgvMostrar[1, dgvMostrar.Rows.Count - 1].Value = persona.nombre;
+                dgvMostrar[2, dgvMostrar.Rows.Count - 1].Value = persona.telefono;
+
+            }   
+
+        }
+
+        //
 
     }
 }

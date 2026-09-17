@@ -28,94 +28,166 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.labReloj = new System.Windows.Forms.Label();
-            this.tmrReloj = new System.Windows.Forms.Timer(this.components);
-            this.labFecha = new System.Windows.Forms.Label();
-            this.labEjecucion = new System.Windows.Forms.Label();
-            this.buttEncener = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttAgregar = new System.Windows.Forms.Button();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.labNombre = new System.Windows.Forms.Label();
+            this.dgvMostrar = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // labReloj
+            // splitContainer1
             // 
-            this.labReloj.AutoSize = true;
-            this.labReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labReloj.Location = new System.Drawing.Point(111, 33);
-            this.labReloj.Name = "labReloj";
-            this.labReloj.Size = new System.Drawing.Size(64, 69);
-            this.labReloj.TabIndex = 0;
-            this.labReloj.Text = "0";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // tmrReloj
+            // splitContainer1.Panel1
             // 
-            this.tmrReloj.Interval = 1000;
-            this.tmrReloj.Tick += new System.EventHandler(this.tmrReloj_Tick);
+            this.splitContainer1.Panel1.Controls.Add(this.mtbTelefono);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.buttAgregar);
+            this.splitContainer1.Panel1.Controls.Add(this.textNombre);
+            this.splitContainer1.Panel1.Controls.Add(this.labNombre);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
-            // labFecha
+            // splitContainer1.Panel2
             // 
-            this.labFecha.AutoSize = true;
-            this.labFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFecha.Location = new System.Drawing.Point(111, 125);
-            this.labFecha.Name = "labFecha";
-            this.labFecha.Size = new System.Drawing.Size(64, 69);
-            this.labFecha.TabIndex = 1;
-            this.labFecha.Text = "0";
+            this.splitContainer1.Panel2.Controls.Add(this.dgvMostrar);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.SplitterDistance = 106;
+            this.splitContainer1.TabIndex = 1;
             // 
-            // labEjecucion
+            // mtbTelefono
             // 
-            this.labEjecucion.AutoSize = true;
-            this.labEjecucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEjecucion.Location = new System.Drawing.Point(12, 307);
-            this.labEjecucion.Name = "labEjecucion";
-            this.labEjecucion.Size = new System.Drawing.Size(289, 29);
-            this.labEjecucion.TabIndex = 2;
-            this.labEjecucion.Text = "Tiempo en Ejecucion: 0";
+            this.mtbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefono.Location = new System.Drawing.Point(452, 33);
+            this.mtbTelefono.Mask = "(999)000-0000";
+            this.mtbTelefono.Name = "mtbTelefono";
+            this.mtbTelefono.Size = new System.Drawing.Size(169, 27);
+            this.mtbTelefono.TabIndex = 7;
             // 
-            // buttEncener
+            // label1
             // 
-            this.buttEncener.Location = new System.Drawing.Point(508, 307);
-            this.buttEncener.Name = "buttEncener";
-            this.buttEncener.Size = new System.Drawing.Size(75, 23);
-            this.buttEncener.TabIndex = 3;
-            this.buttEncener.Text = "Encender";
-            this.buttEncener.UseVisualStyleBackColor = true;
-            this.buttEncener.Click += new System.EventHandler(this.buttEncener_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(373, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Telefono";
             // 
-            // statusStrip1
+            // buttAgregar
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 321);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(620, 24);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.buttAgregar.Location = new System.Drawing.Point(668, 33);
+            this.buttAgregar.Name = "buttAgregar";
+            this.buttAgregar.Size = new System.Drawing.Size(120, 43);
+            this.buttAgregar.TabIndex = 3;
+            this.buttAgregar.Text = "Agregar";
+            this.buttAgregar.UseVisualStyleBackColor = true;
+            this.buttAgregar.Click += new System.EventHandler(this.buttAgregar_Click);
+            // 
+            // textNombre
+            // 
+            this.textNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNombre.Location = new System.Drawing.Point(85, 27);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(253, 27);
+            this.textNombre.TabIndex = 2;
+            // 
+            // labNombre
+            // 
+            this.labNombre.AutoSize = true;
+            this.labNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNombre.Location = new System.Drawing.Point(12, 33);
+            this.labNombre.Name = "labNombre";
+            this.labNombre.Size = new System.Drawing.Size(68, 20);
+            this.labNombre.TabIndex = 1;
+            this.labNombre.Text = "Nombre";
+            // 
+            // dgvMostrar
+            // 
+            this.dgvMostrar.AllowUserToAddRows = false;
+            this.dgvMostrar.AllowUserToDeleteRows = false;
+            this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMostrar.Location = new System.Drawing.Point(0, 0);
+            this.dgvMostrar.Name = "dgvMostrar";
+            this.dgvMostrar.ReadOnly = true;
+            this.dgvMostrar.RowHeadersWidth = 51;
+            this.dgvMostrar.RowTemplate.Height = 24;
+            this.dgvMostrar.Size = new System.Drawing.Size(800, 340);
+            this.dgvMostrar.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Numero";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 280;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Telefono";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 345);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.buttEncener);
-            this.Controls.Add(this.labEjecucion);
-            this.Controls.Add(this.labFecha);
-            this.Controls.Add(this.labReloj);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labReloj;
-        private System.Windows.Forms.Timer tmrReloj;
-        private System.Windows.Forms.Label labFecha;
-        private System.Windows.Forms.Label labEjecucion;
-        private System.Windows.Forms.Button buttEncener;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView dgvMostrar;
+        private System.Windows.Forms.Button buttAgregar;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.Label labNombre;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox mtbTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 
