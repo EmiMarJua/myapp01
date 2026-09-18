@@ -11,13 +11,13 @@ namespace MyApp01
 
         public int id { get; set; }
         public string nombre { get; set; }
-        public string telefono { get; set; }
+        public string email { get; set; }
 
-        public Persona(int id, string nombre, string telefono)
+        public Persona(int id, string nombre, string email)
         {
             this.id = id;
             this.nombre = nombre;
-            this.telefono = telefono;
+            this.email = email;
         }
 
     }

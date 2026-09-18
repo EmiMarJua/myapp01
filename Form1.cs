@@ -23,6 +23,7 @@ namespace MyApp01
             personas.Add(new Persona(2, "Jose Mario", "8712556220"));
             personas.Add(new Persona(3, "Dina Bonaparte", "8712555890"));
             personas.Add(new Persona(4, "Jose Emmanuel", "9712556220"));
+
         }
 
         
@@ -36,7 +37,7 @@ namespace MyApp01
 
             dgvMostrar[0,dgvMostrar.Rows.Count-1].Value = dgvMostrar.Rows.Count;
             dgvMostrar[1,dgvMostrar.Rows.Count-1].Value = textNombre.Text;
-            dgvMostrar[2,dgvMostrar.Rows.Count-1].Value = mtbTelefono.Text;
+            dgvMostrar[2,dgvMostrar.Rows.Count-1].Value = textCorreo.Text;
 
 
         }
@@ -59,6 +60,11 @@ namespace MyApp01
                 dgvMostrar[2, dgvMostrar.Rows.Count - 1].Value = persona.telefono;
 
             }   
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
