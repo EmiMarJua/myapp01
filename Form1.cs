@@ -7,22 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CsvHelper;
+using System.IO;
+using System.Globalization;
 
 namespace MyApp01
 {
     public partial class Form1 : Form
     {
 
-        List<Persona> personas = new List<Persona>();
+        List<Persona> registros = new List<Persona>();
 
 
         public Form1()
         {
             InitializeComponent();
-            personas.Add(new Persona(1,"Jose Luis","8714502555"));
-            personas.Add(new Persona(2, "Jose Mario", "8712556220"));
-            personas.Add(new Persona(3, "Dina Bonaparte", "8712555890"));
-            personas.Add(new Persona(4, "Jose Emmanuel", "9712556220"));
+           
 
         }
 
@@ -31,14 +31,21 @@ namespace MyApp01
         private void buttAgregar_Click(object sender, EventArgs e)
         {
 
-            dgvMostrar.Rows.Add();
+            if(ofdCSV.ShowDialog() == DialogResult.OK)
+            {
+                
+                var reader = new StreamReader(ofdCSV.FileName);
+                var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                registros = csv.GetRecords<Persona>().ToList();
 
+                foreach (var r in registros)
+                {
 
+                    dgvRegistros.Rows.Add(r.id, r.name, r.email);
 
-            dgvMostrar[0,dgvMostrar.Rows.Count-1].Value = dgvMostrar.Rows.Count;
-            dgvMostrar[1,dgvMostrar.Rows.Count-1].Value = textNombre.Text;
-            dgvMostrar[2,dgvMostrar.Rows.Count-1].Value = textCorreo.Text;
+                }
 
+            }
 
         }
 
@@ -50,21 +57,32 @@ namespace MyApp01
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            foreach (var persona in personas)//datos precargados con una clase mediante ubicacion en una  lista
-                                            //usando get set y un bucle foreach
-            {
-
-                dgvMostrar.Rows.Add();
-                dgvMostrar[0, dgvMostrar.Rows.Count - 1].Value = persona.id;
-                dgvMostrar[1, dgvMostrar.Rows.Count - 1].Value = persona.nombre;
-                dgvMostrar[2, dgvMostrar.Rows.Count - 1].Value = persona.telefono;
-
-            }   
+            
 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvRegistros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+            Form2 editar = new Form2(dgvRegistros.Rows[e.RowIndex].Cells[1].Value.ToString(), 
+                                    dgvRegistros.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+            if(editar.ShowDialog() == DialogResult.OK)
+            {
+
+                string nombre = editar.actNombre;
+                string correo = editar.actCorreo;
+                dgvRegistros.Rows[e.RowIndex].Cells[1].Value = nombre;
+                dgvRegistros.Rows[e.RowIndex].Cells[2].Value = correo;
+
+            }
 
         }
 
