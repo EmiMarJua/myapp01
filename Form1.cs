@@ -94,24 +94,24 @@ namespace MyApp01
                 
                 if(row.IsNewRow) continue;// evitar fila vacia al final del datagridview
 
-                var persona = new Persona
+                var persona = new Persona //tomar los valores actualez del datagridview
                 {
                     id = Convert.ToInt32(row.Cells[0].Value),
                     name = row.Cells[1].Value.ToString(),
                     email = row.Cells[2].Value.ToString()
                 };  
 
-                registros.Add(persona);
+                registros.Add(persona); //agregar la persona a la lista de registros
 
             }
 
-            var writer = new StreamWriter(ofdCSV.FileName);
-            var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+            var writer = new StreamWriter(ofdCSV.FileName); //sobreescribir el archivo csv con los datos actualizados
+            var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);// convertir la lista de registros de personas a formato csv
 
-            csv.WriteRecords(registros);
+            csv.WriteRecords(registros);// escribir los registros en el archivo csv
 
-            csv.Dispose();
-            writer.Close();
+            csv.Dispose();// liberar recursos del objeto csv
+            writer.Close();// cerrar el archivo csv
 
             MessageBox.Show("Datos guardados correctamente.");
 
