@@ -130,7 +130,7 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridViewCellStyle3.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="dataGridViewCellStyle1.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
@@ -150,7 +150,7 @@
   <data name="Column4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAAA2CAYAAABgMA/LAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAEpNJREFUaEO11Pd7E1e6B3BdUu8mkOxugBCybMqW54ZsdlNvsiGQTTYBbDCmBEhc
+        wQAADsEBuJFr7QAAEpNJREFUaEO11Pd7E1e6B3BdUu8mkOxugBCybMqW54ZsdlNvsiGQTTYBbDCmBEhc
         ZEmWe8XYmibbYIpjintvxDGWRsWmuKu6YwwJPYBN9k/53ueckYs0Y1nO3f3h84w0c+bMOd/3nVHtP+/G
         gfMeHOjw4Kt2l8z+dnLdq6xd7uvzQ8tC5tkfqN2Lr9rJevztO69sb7uyfctAnivbnw9Zjyra5EC02YEY
         swNRpkEFDkSbnItwycR0uBCrIOa8Uya6w4kokxNRZn/fmAiHn68JsxNfi3IHzQ5F9J4QkPmjOhx0PTK+
@@ -235,7 +235,7 @@
   <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewCellStyle4.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="dataGridViewCellStyle2.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
@@ -255,7 +255,7 @@
   <data name="Column5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADMAAAA6CAYAAAAdrmHiAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABH1JREFUaEPtmuty4kYQRnmqDeiKU/sKtq5gZ7eSF816ba6SAKf2bTr1jTQgdY+w
+        wQAADsEBuJFr7QAABH1JREFUaEPtmuty4kYQRnmqDeiKU/sKtq5gZ7eSF816ba6SAKf2bTr1jTQgdY+w
         MLhKJPw4BYxE1XfomdaAGGwSm4rYEmB8mzqSiUu7T+Jt4tDbxO7MLrUaDIr4RJkWeLCPcAEZKXJMZpMA
         W8CDfYSzZfJoJESOy9hUGODBPsIFZCzKYwkCbhCegXF+LsBa4vCw73G2TJY4lCWWJLWpmDiKHKS2Yl07
         juereKQecY4+vw6v7DF2qQx4CoN14qow67QJwioJzrQCYaeuQhyrgAyqyUO38Wky69SmbFJSD7p98mnz
@@ -279,5 +279,11 @@
   </data>
   <metadata name="ofdCSV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="ofdGuardar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <metadata name="sfdGuardar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>262, 17</value>
   </metadata>
 </root>

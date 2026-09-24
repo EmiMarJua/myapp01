@@ -26,8 +26,6 @@ namespace MyApp01
 
         }
 
-        
-
         private void buttAgregar_Click(object sender, EventArgs e)
         {
 
@@ -83,6 +81,39 @@ namespace MyApp01
                 dgvRegistros.Rows[e.RowIndex].Cells[2].Value = correo;
 
             }
+
+        }
+
+        private void buttGuardar_Click(object sender, EventArgs e)
+        {
+
+            registros = new List<Persona>();
+
+            foreach(DataGridViewRow row in dgvRegistros.Rows)
+            {
+                
+                if(row.IsNewRow) continue;// evitar fila vacia al final del datagridview
+
+                var persona = new Persona
+                {
+                    id = Convert.ToInt32(row.Cells[0].Value),
+                    name = row.Cells[1].Value.ToString(),
+                    email = row.Cells[2].Value.ToString()
+                };  
+
+                registros.Add(persona);
+
+            }
+
+            var writer = new StreamWriter(ofdCSV.FileName);
+            var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+
+            csv.WriteRecords(registros);
+
+            csv.Dispose();
+            writer.Close();
+
+            MessageBox.Show("Datos guardados correctamente.");
 
         }
 

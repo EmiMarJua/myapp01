@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttAgregar = new System.Windows.Forms.Button();
             this.dgvRegistros = new System.Windows.Forms.DataGridView();
-            this.ofdCSV = new System.Windows.Forms.OpenFileDialog();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ofdCSV = new System.Windows.Forms.OpenFileDialog();
+            this.buttGuardar = new System.Windows.Forms.Button();
+            this.ofdGuardar = new System.Windows.Forms.OpenFileDialog();
+            this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,6 +60,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.buttGuardar);
             this.splitContainer1.Panel1.Controls.Add(this.buttAgregar);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
@@ -100,10 +104,6 @@
             this.dgvRegistros.TabIndex = 0;
             this.dgvRegistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistros_CellContentClick);
             // 
-            // ofdCSV
-            // 
-            this.ofdCSV.FileName = "openFileDialog1";
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Id";
@@ -130,10 +130,10 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column4.HeaderText = "Editar";
             this.Column4.Image = ((System.Drawing.Image)(resources.GetObject("Column4.Image")));
             this.Column4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -144,10 +144,10 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column5.HeaderText = "Borrar";
             this.Column5.Image = ((System.Drawing.Image)(resources.GetObject("Column5.Image")));
             this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -155,6 +155,24 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 50;
+            // 
+            // ofdCSV
+            // 
+            this.ofdCSV.FileName = "openFileDialog1";
+            // 
+            // buttGuardar
+            // 
+            this.buttGuardar.Location = new System.Drawing.Point(236, 27);
+            this.buttGuardar.Name = "buttGuardar";
+            this.buttGuardar.Size = new System.Drawing.Size(106, 43);
+            this.buttGuardar.TabIndex = 4;
+            this.buttGuardar.Text = "Guardar";
+            this.buttGuardar.UseVisualStyleBackColor = true;
+            this.buttGuardar.Click += new System.EventHandler(this.buttGuardar_Click);
+            // 
+            // ofdGuardar
+            // 
+            this.ofdGuardar.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -186,6 +204,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column5;
+        private System.Windows.Forms.Button buttGuardar;
+        private System.Windows.Forms.OpenFileDialog ofdGuardar;
+        private System.Windows.Forms.SaveFileDialog sfdGuardar;
     }
 }
 
