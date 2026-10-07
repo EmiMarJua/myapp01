@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+
+namespace MyApp01
+{
+    internal class Datos
+    {
+
+        SqlConnection conexion;
+
+        string cadena = "Server=localhost;Database=Agenda;User Id=sa;Password=s1st3m4s;TrustServerCertificate=true;";
+
+
+        private void conexionOpen()
+        {
+
+            try
+            {
+
+                conexion= new SqlConnection(cadena);
+                conexion.Open();
+
+            }
+            catch(Exception ex){
+
+                MessageBox.Show("Error al conectar: " + ex.ToString());
+
+            }
+
+        }
+
+        private void conexionClose()
+        {
+
+            try { conexion.Close(); }
+            catch(Exception ex) { Console.WriteLine(ex.ToString()); }
+
+        }
+
+        public bool insertar(string nombre, string paterno, string materno, string telefono, string correo)
+        {
+            
+
+            try
+            {
+
+                conexionOpen();
+
+                string comando = "INSERT INTO Datos(nombre, paterno, materno, telefono, correo)" +
+                    " VALUES ('"+nombre+"', '"+paterno+"', '"+materno+"', '"+telefono+"', '"+correo+"' )";
+                SqlCommand cmd = new SqlCommand(comando, conexion);
+                cmd.ExecuteNonQuery();
+
+                conexionClose();
+
+                return true;
+
+            }
+            catch(Exception ex)
+            {
+
+                Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+        }
+
+    }
+}

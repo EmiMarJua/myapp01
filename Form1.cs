@@ -14,11 +14,13 @@ namespace MyApp01
 
     public partial class Form1 : Form
     {
+        
+        
+
         public Form1()
         {
             InitializeComponent();
         }
-        string conexion = "Server=localhost,1433;Database=TopicosAvanzados;User Id=sa;Password=s1st3m4s;TrustServerCertificate=true;";
 
         private void tmrReloj_Tick(object sender, EventArgs e)
         {
@@ -28,9 +30,34 @@ namespace MyApp01
         {
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+            Agregar ag =  new Agregar();
+            ag.Show();
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void agregarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            Agregar ag = new Agregar();
+            ag.Show();
+
+        }
     }
 }
