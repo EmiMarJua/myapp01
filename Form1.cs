@@ -55,9 +55,12 @@ namespace MyApp01
         private void agregarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
-            Agregar ag = new Agregar();
-            ag.Show();
+        }
 
+        private void informacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mostrar_Informacion m = new Mostrar_Informacion();
+            m.Show();
         }
     }
 }

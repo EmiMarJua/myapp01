@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace MyApp01
 {
@@ -67,6 +68,32 @@ namespace MyApp01
                 Console.WriteLine("Error: " + ex.Message);
                 return false;
             }
+        }
+
+        public DataSet Mostrar(string comando)
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+
+                conexionOpen();
+
+                SqlDataAdapter da = new SqlDataAdapter(comando, conexion);
+                da.Fill(ds);
+
+                conexionClose();
+
+                return ds ;
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+
+            }
+
         }
 
     }

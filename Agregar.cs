@@ -36,7 +36,7 @@ namespace MyApp01
         private void buttCerrar_Click(object sender, EventArgs e)
         {
 
-
+            this.Close();
 
         }
     }
