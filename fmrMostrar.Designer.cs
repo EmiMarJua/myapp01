@@ -28,10 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvMostrar = new System.Windows.Forms.DataGridView();
-            this.buttSalir = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttInsertar = new System.Windows.Forms.Button();
+            this.buttSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,20 +67,103 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.buttInsertar);
             this.splitContainer1.Panel2.Controls.Add(this.buttSalir);
-            this.splitContainer1.Size = new System.Drawing.Size(941, 486);
+            this.splitContainer1.Size = new System.Drawing.Size(1006, 486);
             this.splitContainer1.SplitterDistance = 313;
             this.splitContainer1.TabIndex = 0;
             // 
             // dgvMostrar
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMostrar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Correo});
             this.dgvMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMostrar.Location = new System.Drawing.Point(0, 0);
             this.dgvMostrar.Name = "dgvMostrar";
             this.dgvMostrar.RowHeadersWidth = 51;
             this.dgvMostrar.RowTemplate.Height = 24;
-            this.dgvMostrar.Size = new System.Drawing.Size(941, 313);
+            this.dgvMostrar.Size = new System.Drawing.Size(1006, 313);
             this.dgvMostrar.TabIndex = 0;
+            this.dgvMostrar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_CellContentClick);
+            this.dgvMostrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvMostrar_MouseClick);
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 25;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.HeaderText = "Paterno";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column4.HeaderText = "Materno";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column5.HeaderText = "Telefono";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Correo
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
+            this.Correo.Name = "Correo";
+            this.Correo.Width = 250;
+            // 
+            // buttInsertar
+            // 
+            this.buttInsertar.BackColor = System.Drawing.Color.CadetBlue;
+            this.buttInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttInsertar.Location = new System.Drawing.Point(510, 67);
+            this.buttInsertar.Name = "buttInsertar";
+            this.buttInsertar.Size = new System.Drawing.Size(181, 57);
+            this.buttInsertar.TabIndex = 1;
+            this.buttInsertar.Text = "Insertar";
+            this.buttInsertar.UseVisualStyleBackColor = false;
+            this.buttInsertar.Click += new System.EventHandler(this.buttInsertar_Click);
             // 
             // buttSalir
             // 
@@ -82,26 +178,15 @@
             this.buttSalir.UseVisualStyleBackColor = false;
             this.buttSalir.Click += new System.EventHandler(this.buttSalir_Click);
             // 
-            // buttInsertar
-            // 
-            this.buttInsertar.BackColor = System.Drawing.Color.CadetBlue;
-            this.buttInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttInsertar.Location = new System.Drawing.Point(510, 67);
-            this.buttInsertar.Name = "buttInsertar";
-            this.buttInsertar.Size = new System.Drawing.Size(181, 57);
-            this.buttInsertar.TabIndex = 1;
-            this.buttInsertar.Text = "Insertar";
-            this.buttInsertar.UseVisualStyleBackColor = false;
-            this.buttInsertar.Click += new System.EventHandler(this.buttInsertar_Click);
-            // 
             // Mostrar_Informacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 486);
+            this.ClientSize = new System.Drawing.Size(1006, 486);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Mostrar_Informacion";
             this.Text = "Mostrar_Informacion";
+            this.Activated += new System.EventHandler(this.Mostrar_Informacion_Activated);
             this.Load += new System.EventHandler(this.Mostrar_Informacion_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -118,5 +203,11 @@
         private System.Windows.Forms.DataGridView dgvMostrar;
         private System.Windows.Forms.Button buttSalir;
         private System.Windows.Forms.Button buttInsertar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
     }
 }

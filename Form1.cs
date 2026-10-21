@@ -62,5 +62,28 @@ namespace MyApp01
             Mostrar_Informacion m = new Mostrar_Informacion();
             m.Show();
         }
+
+        private void agregarToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            Agregar ag = new Agregar();
+            ag.Show();
+        }
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Estados ed = new Estados();
+            ed.Show();
+        }
+
+        private void verToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Municipios m = new Municipios();
+            m.Show();
+        }
     }
 }

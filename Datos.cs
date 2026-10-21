@@ -43,29 +43,22 @@ namespace MyApp01
 
         }
 
-        public bool insertar(string nombre, string paterno, string materno, string telefono, string correo)
+        public bool ejecutar(SqlCommand comando)
         {
-            
-
             try
             {
-
                 conexionOpen();
 
-                string comando = "INSERT INTO Datos(nombre, paterno, materno, telefono, correo)" +
-                    " VALUES ('"+nombre+"', '"+paterno+"', '"+materno+"', '"+telefono+"', '"+correo+"' )";
-                SqlCommand cmd = new SqlCommand(comando, conexion);
-                cmd.ExecuteNonQuery();
+                comando.Connection = conexion;
+                comando.ExecuteNonQuery();
 
                 conexionClose();
-
                 return true;
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
+                conexionClose();
                 return false;
             }
         }
@@ -96,5 +89,20 @@ namespace MyApp01
 
         }
 
+        public bool eliminar(int id)
+        {
+            SqlCommand comando = new SqlCommand("DELETE FROM Datos WHERE id = @id");
+
+            comando.Parameters.AddWithValue("@id", id);
+
+            return ejecutar(comando);
+        }
+
     }
 }
+//menu contextual sobre el datagrid, cuando se seleccione se aparezca un menu que muestre eliminar y modificar
+//el eliminar va a ser similar al de actualizar y cuando se elimina se tiene que volver a cargar todo en el
+// datagrid
+
+
+//
