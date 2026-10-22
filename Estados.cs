@@ -17,8 +17,31 @@ namespace MyApp01
             InitializeComponent();
         }
 
+        private void mostrarDatos()
+        {
+            EstadosMunicipios datos = new EstadosMunicipios();
+
+            DataSet ds = datos.Mostrar("SELECT * FROM estado order by nombre ASC");
+
+            if (ds != null && ds.Tables.Count > 0)
+            {
+                dgvEstados.AutoGenerateColumns = false;
+
+                dgvEstados.Columns[0].DataPropertyName = "id";
+                dgvEstados.Columns[1].DataPropertyName = "nombre";
+
+                dgvEstados.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                MessageBox.Show("No se pudo obtener la información de la base de datos");
+            }
+        }
+
         private void buttMostrar_Click(object sender, EventArgs e)
         {
+
+            mostrarDatos();
 
         }
 

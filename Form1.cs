@@ -76,14 +76,32 @@ namespace MyApp01
 
         private void verToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Estados ed = new Estados();
-            ed.Show();
         }
 
         private void verToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void verEstadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void verEstadosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Estados ed = new Estados();
+            ed.Show();
+        }
+
+        private void verMunicipiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             Municipios m = new Municipios();
             m.Show();
+        }
+
+        private void verEstadosYMunicipiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EdMun ed = new EdMun();
+            ed.Show();
         }
     }
 }

@@ -53,12 +53,19 @@
       <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Datos.cs" />
+    <Compile Include="EdMun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdMun.Designer.cs">
+      <DependentUpon>EdMun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estados.Designer.cs">
       <DependentUpon>Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadosMunicipios.cs" />
     <Compile Include="fmrMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +88,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdMun.resx">
+      <DependentUpon>EdMun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estados.resx">
       <DependentUpon>Estados.cs</DependentUpon>

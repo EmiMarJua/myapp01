@@ -12,3 +12,4 @@ C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Agregar
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Mostrar_Informacion.resources
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Estados.resources
 C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.Municipios.resources
+C:\Users\Emiliano Marcial\source\repos\MyApp01\MyApp01\obj\Debug\MyApp01.EdMun.resources
