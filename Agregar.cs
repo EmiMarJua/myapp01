@@ -101,5 +101,22 @@ namespace MyApp01
             this.Close();
 
         }
+
+        private void Agregar_Load(object sender, EventArgs e)
+        {
+            EstadosMunicipios datos = new EstadosMunicipios();
+
+            DataSet dsEstados = new DataSet();
+
+            dsEstados = datos.Mostrar("Select * from estado");
+
+            if(dsEstados != null && dsEstados.Tables.Count > 0)
+            {
+                cmbEstados.DataSource = dsEstados.Tables[0];
+                cmbEstados.DisplayMember = "nombre";
+                cmbEstados.ValueMember = "id";
+            }
+
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.textMaterno = new System.Windows.Forms.TextBox();
             this.textCorreo = new System.Windows.Forms.TextBox();
             this.buttCerrar = new System.Windows.Forms.Button();
+            this.cmbEstados = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +76,7 @@
             // 
             this.buttAgregar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttAgregar.Location = new System.Drawing.Point(19, 226);
+            this.buttAgregar.Location = new System.Drawing.Point(32, 312);
             this.buttAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttAgregar.Name = "buttAgregar";
             this.buttAgregar.Size = new System.Drawing.Size(155, 58);
@@ -155,7 +156,7 @@
             // 
             this.buttCerrar.BackColor = System.Drawing.Color.Coral;
             this.buttCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttCerrar.Location = new System.Drawing.Point(237, 226);
+            this.buttCerrar.Location = new System.Drawing.Point(250, 312);
             this.buttCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttCerrar.Name = "buttCerrar";
             this.buttCerrar.Size = new System.Drawing.Size(155, 58);
@@ -164,11 +165,21 @@
             this.buttCerrar.UseVisualStyleBackColor = false;
             this.buttCerrar.Click += new System.EventHandler(this.buttCerrar_Click);
             // 
+            // cmbEstados
+            // 
+            this.cmbEstados.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstados.FormattingEnabled = true;
+            this.cmbEstados.Location = new System.Drawing.Point(41, 247);
+            this.cmbEstados.Name = "cmbEstados";
+            this.cmbEstados.Size = new System.Drawing.Size(407, 32);
+            this.cmbEstados.TabIndex = 13;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 320);
+            this.ClientSize = new System.Drawing.Size(482, 394);
+            this.Controls.Add(this.cmbEstados);
             this.Controls.Add(this.buttCerrar);
             this.Controls.Add(this.textCorreo);
             this.Controls.Add(this.textMaterno);
@@ -184,6 +195,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Agregar";
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.Agregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +215,6 @@
         private System.Windows.Forms.TextBox textMaterno;
         private System.Windows.Forms.TextBox textCorreo;
         private System.Windows.Forms.Button buttCerrar;
+        private System.Windows.Forms.ComboBox cmbEstados;
     }
 }
