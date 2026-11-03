@@ -23,7 +23,9 @@ namespace MyApp01
         private void Mostrar_Informacion_Load(object sender, EventArgs e)
         {
             Datos datos = new Datos();
-            DataSet ds = datos.Mostrar("SELECT * FROM Datos");
+            DataSet ds = datos.Mostrar("select datos.id,datos.nombre,datos.paterno,datos.materno,datos.telefono,datos.correo,estado.nombre As Estado" +
+                " ,municipios.nombre AS Municipio, datos.idEstado, datos.idMunicipio from datos inner join estado on datos.idEstado = " +
+                "estado.idEstado Inner join municipios on datos.idMunicipio = Municipios.idMunicipios;");
 
             if (ds != null)
             {
@@ -69,13 +71,18 @@ namespace MyApp01
             {
                 int pos = int.Parse(opcion.Replace("Modificar", ""));
 
+
                 Agregar actualizar = new Agregar(
                     dgvMostrar.Rows[pos].Cells[1].Value.ToString(),
                     dgvMostrar.Rows[pos].Cells[2].Value.ToString(),
                     dgvMostrar.Rows[pos].Cells[3].Value.ToString(),
                     dgvMostrar.Rows[pos].Cells[4].Value.ToString(),
                     dgvMostrar.Rows[pos].Cells[5].Value.ToString(),
+                    Convert.ToInt32(dgvMostrar.Rows[pos].Cells["idEstado"].Value),
+                    Convert.ToInt32(dgvMostrar.Rows[pos].Cells["idMunicipio"].Value),
                     Convert.ToInt32(dgvMostrar.Rows[pos].Cells[0].Value));
+
+               
 
                 actualizar.ShowDialog();
 
@@ -85,12 +92,12 @@ namespace MyApp01
 
         }
 
-       
-
         private void ActualizarDatos()
         {
             Datos datos = new Datos();
-            DataSet ds = datos.Mostrar("SELECT * FROM Datos");
+            DataSet ds = datos.Mostrar("select datos.id,datos.nombre,datos.paterno,datos.materno,datos.telefono,datos.correo," +
+                "estado.nombre AS  Estado ,municipios.nombre AS Municipio, datos.idEstado, datos.idMunicipio " +
+                " from datos inner join estado on datos.idEstado = estado.idEstado Inner join municipios on datos.idMunicipio = Municipios.idMunicipios;");
 
                 dgvMostrar.AutoGenerateColumns = false;
 
@@ -100,12 +107,14 @@ namespace MyApp01
                 dgvMostrar.Columns[3].DataPropertyName = "Materno";
                 dgvMostrar.Columns[4].DataPropertyName = "Telefono";
                 dgvMostrar.Columns[5].DataPropertyName = "Correo";
+                dgvMostrar.Columns[6].DataPropertyName = "Estado";
+                dgvMostrar.Columns[7].DataPropertyName = "Municipio";
+                dgvMostrar.Columns["idEstado"].DataPropertyName = "idEstado";
+                dgvMostrar.Columns["idMunicipio"].DataPropertyName = "idMunicipio";
 
-                dgvMostrar.DataSource = ds.Tables[0];
+            dgvMostrar.DataSource = ds.Tables[0];
 
         }
-
-        
 
         private void buttInsertar_Click(object sender, EventArgs e)
         {
@@ -132,6 +141,8 @@ namespace MyApp01
                 dgvMostrar.Rows[e.RowIndex].Cells[3].Value.ToString(),
                 dgvMostrar.Rows[e.RowIndex].Cells[4].Value.ToString(),
                 dgvMostrar.Rows[e.RowIndex].Cells[5].Value.ToString(),
+                Convert.ToInt32(dgvMostrar.Rows[e.RowIndex].Cells["idEstado"].Value),
+                Convert.ToInt32(dgvMostrar.Rows[e.RowIndex].Cells["idMunicipio"].Value),
                 Convert.ToInt32(dgvMostrar.Rows[e.RowIndex].Cells[0].Value));
             actualizar.Show();
 

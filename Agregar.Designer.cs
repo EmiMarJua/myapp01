@@ -41,6 +41,7 @@
             this.textCorreo = new System.Windows.Forms.TextBox();
             this.buttCerrar = new System.Windows.Forms.Button();
             this.cmbEstados = new System.Windows.Forms.ComboBox();
+            this.cmbMunicpios = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -76,7 +77,7 @@
             // 
             this.buttAgregar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttAgregar.Location = new System.Drawing.Point(32, 312);
+            this.buttAgregar.Location = new System.Drawing.Point(32, 352);
             this.buttAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttAgregar.Name = "buttAgregar";
             this.buttAgregar.Size = new System.Drawing.Size(155, 58);
@@ -156,7 +157,7 @@
             // 
             this.buttCerrar.BackColor = System.Drawing.Color.Coral;
             this.buttCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttCerrar.Location = new System.Drawing.Point(250, 312);
+            this.buttCerrar.Location = new System.Drawing.Point(250, 352);
             this.buttCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttCerrar.Name = "buttCerrar";
             this.buttCerrar.Size = new System.Drawing.Size(155, 58);
@@ -167,18 +168,29 @@
             // 
             // cmbEstados
             // 
-            this.cmbEstados.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstados.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstados.FormattingEnabled = true;
-            this.cmbEstados.Location = new System.Drawing.Point(41, 247);
+            this.cmbEstados.Location = new System.Drawing.Point(17, 235);
             this.cmbEstados.Name = "cmbEstados";
             this.cmbEstados.Size = new System.Drawing.Size(407, 32);
             this.cmbEstados.TabIndex = 13;
+            this.cmbEstados.SelectedIndexChanged += new System.EventHandler(this.cmbEstados_SelectedIndexChanged);
+            // 
+            // cmbMunicpios
+            // 
+            this.cmbMunicpios.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMunicpios.FormattingEnabled = true;
+            this.cmbMunicpios.Location = new System.Drawing.Point(17, 283);
+            this.cmbMunicpios.Name = "cmbMunicpios";
+            this.cmbMunicpios.Size = new System.Drawing.Size(407, 31);
+            this.cmbMunicpios.TabIndex = 14;
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 394);
+            this.ClientSize = new System.Drawing.Size(482, 449);
+            this.Controls.Add(this.cmbMunicpios);
             this.Controls.Add(this.cmbEstados);
             this.Controls.Add(this.buttCerrar);
             this.Controls.Add(this.textCorreo);
@@ -216,5 +228,6 @@
         private System.Windows.Forms.TextBox textCorreo;
         private System.Windows.Forms.Button buttCerrar;
         private System.Windows.Forms.ComboBox cmbEstados;
+        private System.Windows.Forms.ComboBox cmbMunicpios;
     }
 }

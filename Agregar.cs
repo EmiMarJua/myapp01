@@ -17,6 +17,9 @@ namespace MyApp01
         bool updateMode = false;
         int idRegistro = 0;
 
+        int estadoRegistro = 0;
+        int municipioRegistro = 0;
+
         public Agregar()
         {
             InitializeComponent();
@@ -24,7 +27,7 @@ namespace MyApp01
 
         Datos d = new Datos();
 
-        public  Agregar(string nombre, string paterno, string materno, string telefono, string correo, int id)
+        public  Agregar(string nombre, string paterno, string materno, string telefono, string correo, int idEstado, int idMunicipio,int id)
         {
 
             InitializeComponent();
@@ -34,6 +37,8 @@ namespace MyApp01
             textMaterno.Text = materno;
             mtbTelefono.Text = telefono;
             textCorreo.Text = correo;
+            estadoRegistro = idEstado;
+            municipioRegistro = idMunicipio;
             idRegistro = id;
 
             updateMode = true;
@@ -47,9 +52,9 @@ namespace MyApp01
             if (updateMode == false)
             {
 
-                SqlCommand comando = new SqlCommand("INSERT INTO Datos(nombre, paterno, materno, telefono, correo)" +
+                SqlCommand comando = new SqlCommand("INSERT INTO Datos(nombre, paterno, materno, telefono, correo, idEstado, idMunicipio)" +
                         " VALUES ('" + textNombre.Text + "', '" + textPaterno.Text + "', '" + textMaterno.Text
-                        + "', '" + mtbTelefono.Text + "', '" + textCorreo.Text + "' )");
+                        + "', '" + mtbTelefono.Text + "', '" + textCorreo.Text + "', " + cmbEstados.SelectedValue + ", " + cmbMunicpios.SelectedValue + " )");
 
                 bool f = d.ejecutar(comando);
 
@@ -70,7 +75,7 @@ namespace MyApp01
             {
                 SqlCommand comando =new SqlCommand("UPDATE Datos SET nombre = @nombre, " +
                     "paterno = @paterno, materno = @materno, " +
-                    "telefono = @telefono, correo = @correo " +
+                    "telefono = @telefono, correo = @correo, idEstado = @idEstado, idMunicipio = @idMunicipio " + 
                     "WHERE id = @id")  ;
 
                 comando.Parameters.AddWithValue("@nombre", textNombre.Text);
@@ -78,6 +83,8 @@ namespace MyApp01
                 comando.Parameters.AddWithValue("@materno", textMaterno.Text);
                 comando.Parameters.AddWithValue("@telefono", mtbTelefono.Text);
                 comando.Parameters.AddWithValue("@correo", textCorreo.Text);
+                comando.Parameters.AddWithValue("@idEstado", cmbEstados.SelectedValue);
+                comando.Parameters.AddWithValue("@idMunicipio", cmbMunicpios.SelectedValue);
                 comando.Parameters.AddWithValue("@id", idRegistro);
 
                 bool f = d.ejecutar(comando);
@@ -104,7 +111,7 @@ namespace MyApp01
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-            EstadosMunicipios datos = new EstadosMunicipios();
+            Datos datos = new Datos();
 
             DataSet dsEstados = new DataSet();
 
@@ -114,9 +121,51 @@ namespace MyApp01
             {
                 cmbEstados.DataSource = dsEstados.Tables[0];
                 cmbEstados.DisplayMember = "nombre";
-                cmbEstados.ValueMember = "id";
+                cmbEstados.ValueMember = "idEstado";
+
+                if (updateMode)
+                {
+                    cmbEstados.SelectedValue = estadoRegistro;
+                }
+
+                cambiosMun(Convert.ToInt32(cmbEstados.SelectedValue));
+
+                if (updateMode)
+                {
+                    cmbMunicpios.SelectedValue = municipioRegistro;
+                }
+
             }
 
         }
+
+        private void cmbEstados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            cambiosMun(Convert.ToInt32(cmbEstados.SelectedIndex + 1));
+
+        }
+
+        private void cambiosMun(int idEstado)
+        {
+
+            Datos datos = new Datos();
+
+            DataSet dsMunicipios = new DataSet();
+            dsMunicipios = datos.Mostrar("select * from municipios where idEstado = " + idEstado );
+
+            if (dsMunicipios != null && dsMunicipios.Tables.Count > 0)
+            {
+                cmbMunicpios.DataSource = dsMunicipios.Tables[0];
+                cmbMunicpios.DisplayMember = "nombre";
+                cmbMunicpios.ValueMember = "idMunicipios";
+            }
+
+        }
+
     }
 }
+
+//modificiar 
+
+
