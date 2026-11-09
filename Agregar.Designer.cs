@@ -184,6 +184,7 @@
             this.cmbMunicpios.Name = "cmbMunicpios";
             this.cmbMunicpios.Size = new System.Drawing.Size(407, 31);
             this.cmbMunicpios.TabIndex = 14;
+            this.cmbMunicpios.SelectedIndexChanged += new System.EventHandler(this.cmbMunicpios_SelectedIndexChanged);
             // 
             // Agregar
             // 
